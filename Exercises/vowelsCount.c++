@@ -3,17 +3,17 @@
 
 typedef std::set<char> vowels_t;
 
-int vowelsCount(const std::string inputStr)
+int vowelsCount(const std::string str)
 {
     const vowels_t vowels{'a', 'e', 'i', 'o', 'u'};
-    int vowels_count = 0;
+    int vowelsCount = 0;
 
-    for (int i = 0; i < inputStr.size(); i++)
+    for (int i = 0; i < str.size(); i++)
     {
-        vowels_count += vowels.count(inputStr[i]);
+        vowelsCount += vowels.count(str[i]);
     }
 
-    return vowels_count;
+    return vowelsCount;
 };
 
 int main()

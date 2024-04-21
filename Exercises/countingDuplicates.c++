@@ -1,7 +1,7 @@
 #include <iostream>
 #include <map>
 
-int countingDuplicates(std::string str)
+int countingDuplicates(const std::string str)
 {
     std::map<char, int> charsCount = {};
     std::string uniqueChars = "";
