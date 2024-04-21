@@ -3,9 +3,9 @@
 
 typedef std::set<char> vowels_t;
 
-int VowelsCount(const std::string &inputStr)
+int vowelsCount(const std::string inputStr)
 {
-    vowels_t vowels{'a', 'e', 'i', 'o', 'u'};
+    const vowels_t vowels{'a', 'e', 'i', 'o', 'u'};
     int vowels_count = 0;
 
     for (int i = 0; i < inputStr.size(); i++)
@@ -19,6 +19,6 @@ int VowelsCount(const std::string &inputStr)
 int main()
 {
 
-    std::cout << VowelsCount("abracadabra") << std::endl;
+    std::cout << vowelsCount("abracadabra") << std::endl;
     return 0;
 }
