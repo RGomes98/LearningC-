@@ -18,7 +18,6 @@ int vowelsCount(const std::string str)
 
 int main()
 {
-
     std::cout << vowelsCount("abracadabra") << std::endl;
     return 0;
 }

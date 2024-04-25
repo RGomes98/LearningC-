@@ -10,14 +10,11 @@ std::string convertToCamelCase(std::string str)
     {
         if (!delimitedChars.count(str[i]))
         {
-
             camelCase += str[i];
         }
         else
         {
-            char character = str[i + 1] ? toupper(str[i + 1]) : str[i];
-            str[i + 1] = character;
-            continue;
+            str[i + 1] = toupper(str[i + 1]);
         }
     }
 
