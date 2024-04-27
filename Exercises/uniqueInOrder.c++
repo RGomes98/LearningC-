@@ -10,16 +10,11 @@ vector<char> uniqueInOrder(const string iterable)
     for (int i = 0; i < iterable.size(); i++)
     {
         char currentCharacter = iterable[i];
-        int currentPosition = i;
 
-        result.push_back(currentCharacter);
-
-        while (iterable[currentPosition] == currentCharacter)
+        if (!result.size() || result[result.size() - 1] != currentCharacter)
         {
-            currentPosition++;
+            result.push_back(currentCharacter);
         }
-
-        i = currentPosition - 1;
     }
 
     return result;

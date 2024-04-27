@@ -6,20 +6,18 @@ using namespace std;
 vector<string> splitString(const string str, const char delimiter)
 {
     vector<string> words;
+    string word = "";
 
-    for (int i = 0; i < str.size(); i++)
+    for (int i = 0; i <= str.size(); i++)
     {
-        string word = "";
-        int current = i;
-
-        while (str[current] != delimiter && current < str.size())
+        if (str[i] == delimiter || i == str.size())
         {
-            word += str[current];
-            current++;
+            words.push_back(word);
+            word = "";
+            continue;
         }
 
-        i = current;
-        words.push_back(word);
+        word += str[i];
     }
 
     return words;
